@@ -8,10 +8,18 @@
     <title>Container & Spacing</title>
   </head>
   <body>
-    <!-- Container -->
-    <div>
+    <div class="container mx-auto">
+      <h1 class="bg-yellow-300">Container</h1>
+      <p>
+        All elements are inside this div with a utility
+        <code class="font-bold">container</code> class. This utility class adds
+        5 breakpoints (the most common ones) for responsive layouts by default.
+      </p>
+
+      <br />
+
       <article>
-        <h3>Article One</h3>
+        <h3>Article:</h3>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
           Exercitationem laboriosam libero molestiae recusandae accusantium
@@ -20,18 +28,58 @@
         </p>
       </article>
 
-      <!-- Margin -->
+      <br />
 
-      <!-- Padding -->
+      <h2 class="bg-yellow-300">Margin:</h2>
+      <div class="bg-slate-100 m-2">Margin m-2 (all sides)</div>
+      <div class="bg-slate-100 ml-4">Margin ml-4 (left)</div>
+      <div class="bg-slate-100 mt-4">Margin mt-4 (top)</div>
+      <div class="bg-slate-100 mb-4">Margin mb-4 (bottom)</div>
+      <div class="bg-slate-100 mr-4">Margin mr-4 (right)</div>
+      <div class="bg-slate-100 mt-[20px]">Arbitrary margin top mt[20px]</div>
 
-      <!-- Space Between X -->
+      <br />
 
-      <!-- Space Between Y -->
+      <h2 class="bg-yellow-300">Padding:</h2>
+      <div class="bg-slate-100 p-2">Padding p-2 (all sides)</div>
+      <div class="bg-slate-100 pl-4">Padding pl-4 (left)</div>
+      <div class="bg-slate-100 pr-4">Padding pr-4 (right)</div>
+      <div class="bg-slate-100 pt-4">Padding pt-4 (top)</div>
+      <div class="bg-slate-100 pb-4">Padding pb-4 (bottom)</div>
+      <div class="bg-slate-100 pl-[50px]">Arbitrary Padding left pl[50px]</div>
+
+      <br />
+
+      <h2 class="bg-yellow-300">Space Between X (horizontally):</h2>
+      <p>
+        Here we added the utility classes
+        <code class="font-bold">flex space-x-4</code> to the div wrapping the
+        items
+      </p>
+      <div class="flex space-x-4">
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+      </div>
+
+      <br />
+
+      <h2 class="bg-yellow-300">Space Between Y (vertically):</h2>
+      <p>
+        Here we added the utility classes
+        <code class="font-bold">flex flex-col space-y-4</code> to the div
+        wrapping the items
+      </p>
+      <div class="flex flex-col space-y-4">
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+      </div>
     </div>
   </body>
 </html>
 
-<!-- Breakpoinsts for Container 
+<!-- Breakpoints (media queries) for containers: 
     container	None	width: 100%;
     sm (640px)	    max-width: 640px;
     md (768px)	    max-width: 768px;
@@ -40,7 +88,7 @@
     2xl (1536px)	  max-width: 1536px; 
 -->
 
-<!-- Margin Values
+<!-- Margin Values:
       m-0	margin: 0px;
       mx-0	margin-left: 0px;
       margin-right: 0px;
@@ -367,7 +415,7 @@
       ml-auto	margin-left: auto; 
     -->
 
-<!-- Padding Values
+<!-- Padding Values:
       p-0	padding: 0px;
       px-0	padding-left: 0px;
       padding-right: 0px;
@@ -685,7 +733,7 @@
       pl-96	padding-left: 24rem; /* 384px */
     -->
 
-<!-- Space Between X/Y
+<!-- Space Between X/Y:
       space-x-0 > * + *	margin-left: 0px;
       space-y-0 > * + *	margin-top: 0px;
       space-x-0.5 > * + *	margin-left: 0.125rem; /* 2px */
