@@ -8,25 +8,108 @@
     <title>Colors</title>
   </head>
   <body>
-    <!-- Default colors -->
-    <!-- white, black, red, green, blue, orange, yellow, purple, lime, emerald, teal, cyan, indigo, violet, fuchsia, pink, rose, sky, gray, slate, zinc, neutral, stone, amber,  -->
+    <h2 class="font-bold bg-yellow-300">Default colors:</h2>
+    <p>
+      white, black, red, green, blue, orange, yellow, purple, lime, emerald,
+      teal, cyan, indigo, violet, fuchsia, pink, rose, sky, gray, slate, zinc,
+      neutral, stone, amber.
+    </p>
 
-    <!-- Text Colors -->
+    <br />
 
-    <!-- Background Colors -->
+    <h2 class="font-bold bg-yellow-300">Text Colors:</h2>
+    <p class="text-white">Color (it doesn't have shades): white</p>
+    <p class="text-black">Color (it doesn't have shades): black</p>
+    <p class="text-red-500">Color (shade = 500): red</p>
+    <p class="text-green-500">Color (shade = 500): green</p>
+    <p class="text-blue-500">Color (shade = 500): blue</p>
+    <p class="text-orange-500">Color (shade = 500): orange</p>
+    <p class="text-yellow-500">Color (shade = 500): yellow</p>
+    <p class="text-purple-500">Color (shade = 500): purple</p>
+    <p class="text-lime-500">Color (shade = 500): lime</p>
+    <p class="text-emerald-500">Color (shade = 500): emerald</p>
+    <p class="text-teal-500">Color (shade = 500): teal</p>
+    <p class="text-cyan-500">Color (shade = 500): cyan</p>
+    <p class="text-indigo-500">Color (shade = 500): indigo</p>
+    <p class="text-violet-500">Color (shade = 500): violet</p>
+    <p class="text-fuchsia-500">Color (shade = 500): fuchsia</p>
+    <p class="text-pink-500">Color (shade = 500): pink</p>
+    <p class="text-rose-500">Color (shade = 500): rose</p>
+    <p class="text-sky-500">Color (shade = 500): sky</p>
+    <p class="text-gray-500">Color (shade = 500): gray</p>
+    <p class="text-slate-500">Color (shade = 500): slate</p>
+    <p class="text-zinc-500">Color (shade = 500): zinc</p>
+    <p class="text-neutral-500">Color (shade = 500): neutral</p>
+    <p class="text-stone-500">Color (shade = 500): stone</p>
+    <p class="text-amber-500">Color (shade = 500): amber</p>
 
-    <!-- Text Underline -->
+    <br />
 
-    <!-- Border Colors -->
+    <h2 class="font-bold bg-yellow-300">Background Colors:</h2>
+    <p class="bg-black text-white">Background color: black (with text-white)</p>
+    <p class="bg-red-300">Background color: red (shade = 300)</p>
 
-    <!-- Divide Colors -->
+    <br />
 
-    <!-- Outline Colors -->
+    <h2 class="font-bold bg-yellow-300">Text Underline:</h2>
+    <p class="underline">Just "underline" give us the same color as the text</p>
+    <p class="underline decoration-red-300">
+      Underline with "decoration" red (shade = 300)
+    </p>
 
-    <!-- Box Shadow Colors (Opacity defaults to 100, but you can set it)-->
+    <br />
 
-    <!-- Accent Colors -->
+    <h2 class="font-bold bg-yellow-300">Border Colors:</h2>
+    <input
+      type="text"
+      class="border"
+      placeholder="The default border is light gray"
+    />
+    <input
+      type="text"
+      class="border border-lime-400"
+      placeholder="This is a border-lime-400 border"
+    />
 
-    <!-- Arbitrary Colors -->
+    <br />
+
+    <h2 class="font-bold bg-yellow-300">Divide Colors:</h2>
+    <div class="divide-y divide-blue-400">
+      <div>Item 1</div>
+      <div>Item 2</div>
+      <div>Item 3</div>
+    </div>
+
+    <br />
+
+    <h2 class="font-bold bg-yellow-300">Outline Colors:</h2>
+    <button class="outline">Default outline</button>
+    <button class="outline outline-purple-400">outline-purple-400</button>
+
+    <br />
+    <br />
+
+    <h2 class="font-bold bg-yellow-300">Box Shadow Colors:</h2>
+    <p>Opacity defaults to 100, but we can change it with a slash "/" after the "shade" number of the color.</p>
+    <span class="shadow-lg bg-cyan-500 shadow-cyan-500">shadow-cyan-500 is the same as shadow-cyan-500/100</span>
+    <span class="shadow-lg bg-cyan-500 shadow-cyan-500/50">shadow-cyan-500/80</span>
+
+    <br />
+    <br />
+
+    <h2 class="font-bold bg-yellow-300">Accent Colors:</h2>
+    <label for="accent-amber-500">accent-amber-500:</label>
+    <input type="checkbox" class="accent-amber-500" id="accent-amber-500" checked>
+    <label for="accent-pink-500">accent-pink-500:</label>
+    <input type="checkbox" class="accent-pink-500" id="accent-pink-500" checked>
+
+    <br />
+    <br />
+
+    <h2 class="font-bold bg-yellow-300">Arbitrary Colors:</h2>
+    <p>We can put any value we want between [...] after the class name, this way we are not stuck on the default values of the framework.</p>
+    <span class="bg-[#5942DF] text-white">bg-[#5942DF]</span>
+    <span class="bg-[rgba(255,0,0)] text-white">bg-[rgb(255,0,0)]</span>
+    <span class="bg-[steelblue] text-white">bg-[steelblue]</span>
   </body>
 </html>
