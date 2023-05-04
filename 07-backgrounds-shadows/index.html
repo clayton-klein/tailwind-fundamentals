@@ -7,14 +7,118 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Backgrounds & Shadows</title>
   </head>
-  <body>
-    <!-- Background Classes -->
+  <body class="mb-8">
+    <h2 class="bg-yellow-300">Background Classes:</h2>
+    <p>
+      This image is using
+      <code>class="h-64 w-72 bg-no-repeat bg-cover bg-center"</code>
+    </p>
+    <div
+      class="h-64 w-72 bg-no-repeat bg-cover bg-center"
+      style="background-image: url(../assets/img/img1.jpg)"
+    ></div>
 
-    <!-- Gradients -->
+    <br />
 
-    <!-- Shadows -->
+    <h2 class="bg-yellow-300">Gradients:</h2>
+    <p>
+      This div is using
+      <code
+        >class="h-24 <span class="bg-red-300">bg-gradient-to-r</span>"
+        from-black to-white"</code
+      >
+    </p>
+    <div class="h-24 bg-gradient-to-r from-black to-white"></div>
+    <p>
+      This div is using
+      <code
+        >class="h-24 <span class="bg-red-300">bg-gradient-to-l</span>"
+        from-black to-white"</code
+      >
+    </p>
+    <div class="h-24 bg-gradient-to-l from-black to-white"></div>
 
-    <!-- Mix Blend -->
+    <br />
+
+    <h2 class="bg-yellow-300">Shadows:</h2>
+    <div class="w-1/2 ml-4 mt-6 p-3 shadow">
+      <p class="bg-gray-200">
+        <code
+          >class="w-1/2 ml-4 mt-6 p-3
+          <span class="bg-red-300">shadow</span>"</code
+        >
+      </p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex saepe dicta
+      nesciunt dolor, amet quis corporis cumque neque consequatur atque!
+    </div>
+    <div class="w-1/2 ml-4 mt-6 p-3 shadow-inner">
+      <p class="bg-gray-200">
+        <code
+          >class="w-1/2 ml-4 mt-6 p-3
+          <span class="bg-red-300">shadow-inner</span>"</code
+        >
+      </p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex saepe dicta
+      nesciunt dolor, amet quis corporis cumque neque consequatur atque!
+    </div>
+    <div class="w-1/2 ml-4 mt-6 p-3 shadow-md">
+      <p class="bg-gray-200">
+        <code
+          >class="w-1/2 ml-4 mt-6 p-3
+          <span class="bg-red-300">shadow-md</span>"</code
+        >
+      </p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex saepe dicta
+      nesciunt dolor, amet quis corporis cumque neque consequatur atque!
+    </div>
+    <div class="w-1/2 ml-4 mt-6 p-3 shadow-2xl">
+      <p class="bg-gray-200">
+        <code
+          >class="w-1/2 ml-4 mt-6 p-3
+          <span class="bg-red-300">shadow-2xl</span>"</code
+        >
+      </p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex saepe dicta
+      nesciunt dolor, amet quis corporis cumque neque consequatur atque!
+    </div>
+    <div class="w-2/3 ml-4 mt-6 p-3 shadow-2xl shadow-blue-500/50">
+      <p class="bg-gray-200">
+        <code
+          >class="w-2/3 ml-4 mt-6 p-3
+          <span class="bg-red-300">shadow-2xl shadow-blue-500/50</span>" <br />
+          (The "/50" controls the opacity)</code
+        >
+      </p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex saepe dicta
+      nesciunt dolor, amet quis corporis cumque neque consequatur atque!
+    </div>
+
+    <br />
+
+    <h2 class="bg-yellow-300">Mix Blend:</h2>
+    <p>This is not a very common feature to use...</p>
+    <code class="bg-gray-200"
+      >outer div using negative value class="flex justify-center
+      <span class="bg-red-300">-space-x-24</span>"</code
+    >
+    <div class="flex justify-center -space-x-24">
+      <div
+        class="w-1/2 h-24 mix-blend-multiply hover:mix-blend-overlay bg-green-400"
+      >
+        <p class="w-3/4">
+          class="w-1/2 h-24 mix-blend-multiply hover:mix-blend-overlay
+          bg-green-400"
+        </p>
+      </div>
+      <div
+        class="relative w-1/2 h-24 mix-blend-multiply hover:mix-blend-overlay bg-blue-400"
+      >
+        <p class="absolute right-0 w-3/4">
+          class="relative w-1/2 h-24 mix-blend-multiply hover:mix-blend-overlay
+          bg-blue-400"
+        </p>
+      </div>
+    </div>
   </body>
 </html>
 
