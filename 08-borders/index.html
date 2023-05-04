@@ -5,14 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Borders</title>
+    <title>Borders & Outline</title>
   </head>
-  <body>
-    <!-- Border Width & Colors -->
+  <body class="bg-gray-300 mb-8 mx-8">
+    <h2 class="bg-yellow-300">Border Width & Colors:</h2>
+    <div class="w-96 m-3 p-5 border">
+      <code>class="w-96 m-3 p-5 border"</code> <br />
+      <p>(just "border" = 1px thickness all sides)</p>
+    </div>
+    <div class="w-96 m-3 p-5 border-4">
+      <code>class="w-96 m-3 p-5 border-4"</code>
+    </div>
+    <div
+      class="mb-8 m-3 p-5 border-t-2 border-t-green-300 border-r-2 border-r-yellow-300 border-b-2 border-b-blue-300 border-l-2 border-l-white-300"
+    >
+      <p class="mb-4">
+        Unfortunately there's no way to "chain" all the border classes at once,
+        here we had to set the position, thickness and the colors separately.
+      </p>
+      <code
+        >class="m-3 p-5 border-t-2 border-t-green-300 border-r-2
+        border-r-yellow-300 border-b-2 border-b-blue-300 border-l-2
+        border-l-white-300"</code
+      >
+    </div>
 
-    <!-- Border Radius -->
+    <h2 class="mb-8 bg-yellow-300">Border Radius</h2>
+    <div class="w-1/2 m-3 p-5 border-4 rounded">
+      <code>class="w-1/2 m-3 p-5 border-4 rounded"</code>
+    </div>
+    <div class="w-1/2 m-3 p-5 border-4 rounded-lg">
+      <code>class="w-1/2 m-3 p-5 border-4 rounded-lg"</code>
+    </div>
+    <div class="w-1/2 m-3 p-5 border-4 rounded-t-xl">
+      <code>class="w-1/2 m-3 p-5 border-4 rounded-t-xl"</code>
+    </div>
+    <div class="w-1/2 m-3 p-5 border-4 rounded-b-xl">
+      <code>class="w-1/2 m-3 p-5 border-4 rounded-b-xl"</code>
+    </div>
+    <div class="w-1/2 m-3 p-5 border-4 rounded-full">
+      <code>class="w-1/2 m-3 p-5 border-4 rounded-full"</code>
+    </div>
 
-    <!-- Outline -->
+    <h2 class="bg-yellow-300">Outline:</h2>
+    <code>class="m-4 py-2 px-6 outline outline-4 outline-red-500 rounded"</code>
+    <button class="m-4 py-2 px-6 outline outline-4 outline-red-500 rounded">
+      CLICK
+    </button>
   </body>
 </html>
 
