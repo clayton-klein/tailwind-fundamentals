@@ -8,26 +8,168 @@
     <title>Interactivity</title>
   </head>
   <body class="mb-8 mx-8">
-    <!-- Hover State Styling -->
+    <h1 id="top" class="font-semibold text-2xl text-center mb-4">
+      Interactivity Examples:
+    </h1>
+    <h2 class="bg-yellow-300">Hover State Styling:</h2>
+    <button
+      class="bg-black text-white py-3 px-5 rounded-lg m-3 font-bold hover:bg-red-300 hover:text-black"
+    >
+      Submit
+    </button>
 
-    <!-- Focus State Styling -->
+    <h2 class="bg-yellow-300 mt-8">Focus State Styling (click or tab):</h2>
+    <button
+      class="bg-black text-white py-3 px-5 rounded-lg m-3 font-bold focus:bg-purple-300 focus:text-black"
+    >
+      Submit
+    </button>
 
-    <!-- Active State Styling -->
+    <h2 class="bg-yellow-300 mt-8">Active State Styling (mouse down):</h2>
+    <button
+      class="bg-black text-white py-3 px-5 rounded-lg m-3 font-bold active:bg-green-300 active:text-black"
+    >
+      Submit
+    </button>
 
-    <!-- Styling based on parent state -->
+    <h2 class="bg-yellow-300 mt-8">Styling based on parent state (group):</h2>
+    <p>
+      In this example the idea is to change the color of the texts (h3 and p)
+      inside the link when we hover over the card (and not only when we hover
+      over the texts themselves), to do it we added the class "group" in the
+      parent element (a) and then we use "group-" before the hover state in the
+      children elements (h3 and p).
+    </p>
+    <a
+      href=""
+      class="group block my-8 max-w-xs mx-auto rounded-lg p-6 bg-fuchsia-100 shadow-lg space-y-3 hover:bg-sky-400"
+    >
+      <h3 class="group-hover:text-white">Card Title</h3>
+      <p class="group-hover:text-white">This is the card text.</p>
+    </a>
 
-    <!-- Pseudo Classes -->
+    <h2 class="bg-yellow-300 mt-8">Pseudo Classes:</h2>
+    <p>
+      Even though we set the "first:" pseudo class in all "li", the style is
+      apllied only on the real first one.
+    </p>
+    <p>
+      To change the bg color of every other "li" we had to add "even:" and
+      "odd:" pseudo class in all of the items and then it was applied
+      accordingly.
+    </p>
+    <ul>
+      <li class="first:bg-blue-300">Item 0</li>
+      <li class="first:bg-red-300 even:bg-purple-300 odd:bg-orange-300">
+        Item 1
+      </li>
+      <li class="first:bg-red-300 even:bg-purple-300 odd:bg-orange-300">
+        Item 2
+      </li>
+      <li class="first:bg-red-300 even:bg-purple-300 odd:bg-orange-300">
+        Item 3
+      </li>
+      <li class="first:bg-red-300 even:bg-purple-300 odd:bg-orange-300">
+        Item 4
+      </li>
+      <li class="first:bg-red-300 even:bg-purple-300 odd:bg-orange-300">
+        Item 5
+      </li>
+    </ul>
 
-    <!-- Appearance -->
-    <!-- Use appearance-none to reset any browser specific styling on an element. This utility is often used when creating custom form components. -->
+    <h2 class="bg-yellow-300 mt-8">Appearance:</h2>
+    <p>
+      The "select" element bellow looks different on different browsers (Chrome
+      and Safari for example), so if we want we can use "appearance-none" to
+      reset any browser's specific styling on an element. This utility class is
+      often used when creating custom form components.
+    </p>
+    <div class="flex justify-center gap-8">
+      <div>
+        <p class="font-bold">Without</p>
+        <select class="w-20 text-center p-2 bg-gray-300">
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+      <div>
+        <p class="font-bold">With</p>
+        <select class="appearance-none w-20 text-center p-2 bg-gray-300">
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+    </div>
 
-    <!-- Cursor -->
+    <h2 class="bg-yellow-300 mt-8">
+      Cursors (hover over the buttons to see the examples):
+    </h2>
+    <button
+      class="bg-black text-white py-3 px-5 rounded-lg m-3 font-bold active:bg-green-300 active:text-black cursor-wait"
+    >
+      cursor-wait
+    </button>
+    <button
+      class="bg-black text-white py-3 px-5 rounded-lg m-3 font-bold active:bg-green-300 active:text-black cursor-not-allowed"
+    >
+      cursor-not-allowed
+    </button>
+    <button
+      class="bg-black text-white py-3 px-5 rounded-lg m-3 font-bold active:bg-green-300 active:text-black cursor-grabbing"
+    >
+      cursor-grabbing
+    </button>
+    <button
+      class="bg-black text-white py-3 px-5 rounded-lg m-3 font-bold active:bg-green-300 active:text-black cursor-crosshair"
+    >
+      cursor-crosshair
+    </button>
+    <button
+      class="bg-black text-white py-3 px-5 rounded-lg m-3 font-bold active:bg-green-300 active:text-black cursor-help"
+    >
+      cursor-help
+    </button>
+    <button
+      class="bg-black text-white py-3 px-5 rounded-lg m-3 font-bold active:bg-green-300 active:text-black cursor-copy"
+    >
+      cursor-copy
+    </button>
 
-    <!-- Resize -->
+    <h2 class="bg-yellow-300 mt-8">
+      Resize: drag the textarea handle (bottom right) in the elements bellow to
+      see the expected behaviour
+    </h2>
+    <textarea class="resize bg-gray-300 text-center m-8" cols="30" rows="10">
+resize (both sides)</textarea
+    >
+    <textarea class="resize-x bg-gray-300 text-center m-8" cols="30" rows="10">
+resize-x (horizontally)</textarea
+    >
+    <textarea class="resize-y bg-gray-300 text-center m-8" cols="30" rows="10">
+resize-y (vertically)</textarea
+    >
 
-    <!-- User Select -->
+    <h2 class="bg-yellow-300 mt-8">
+      User Select (select-none): disallow user to select a text.
+    </h2>
+    <p class="select-none">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, unde
+      explicabo libero, ipsum amet, harum ab sequi maxime suscipit obcaecati
+      laboriosam eveniet doloribus nesciunt. Maiores mollitia animi corporis
+      laborum doloribus possimus, voluptatum qui eos provident nisi tenetur
+      asperiores explicabo vel officia nobis alias placeat numquam neque,
+      debitis illo! Sapiente, quas!
+    </p>
 
-    <!-- Smooth Scroll Example -->
+    <h2 class="bg-yellow-300 mt-8">
+      Smooth Scroll Example (click on the link):
+    </h2>
+    <p>
+      We put the class "scroll-smooth" in the <code> "html" </code> element.
+    </p>
+    <a href="#top" class="bg-green-300 inline-block p-4 m-4 rounded-lg"
+      >Go Top</a
+    >
   </body>
 </html>
 
