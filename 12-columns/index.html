@@ -8,9 +8,81 @@
     <title>Columns</title>
   </head>
   <body class="mb-8 mx-8">
-    <!-- Columns -->
+    <h2 class="bg-yellow-300">Columns:</h2>
+    <p class="mt-2">
+      We can specify the number of columns we want or the size (sm, md, lg...), but it's more common to do this kind of thing using flexbox or grid.
+    </p>
+    <p class="mt-8">
+      Here we're using <code class="font-bold">class="columns-4 gap-3"</code>
+    </p>
+    <div class="columns-4 gap-3">
+      <img
+        class="w-full"
+        src="../assets/img/img8.jpg"
+        alt="a little girl wearing VR headset"
+      />
+      <img
+        class="w-full"
+        src="../assets/img/img7.jpg"
+        alt="keys of a pc gamer keyboard"
+      />
+      <img
+        class="w-full"
+        src="../assets/img/img4.jpg"
+        alt="an opened laptop on a chair"
+      />
+      <img
+        class="w-full"
+        src="../assets/img/img5.jpg"
+        alt="inside of a gamer desktop"
+      />
+    </div>
+    <p class="mt-8">
+      And here we're using
+      <code class="font-bold">class="columns-2xs gap-1 space-y-4</code>, the
+      class "gap" doesn't work to set vertical space in this case, so we used
+      "space-y" and if we resize the screen to a smaller enough size, we'll see
+      that the items stack automatically, differently from setting the columns
+      by number like in the first example.
+    </p>
+    <div class="columns-2xs gap-1 space-y-4">
+      <img
+        class="w-full"
+        src="../assets/img/img8.jpg"
+        alt="a little girl wearing VR headset"
+      />
+      <img
+        class="w-full"
+        src="../assets/img/img7.jpg"
+        alt="keys of a pc gamer keyboard"
+      />
+      <img
+        class="w-full"
+        src="../assets/img/img4.jpg"
+        alt="an opened laptop on a chair"
+      />
+      <img
+        class="w-full"
+        src="../assets/img/img5.jpg"
+        alt="inside of a gamer desktop"
+      />
+    </div>
 
-    <!-- Aspect Ratio -->
+    <h2 class="bg-yellow-300 mt-8 mb-4">Aspect Ratio:</h2>
+    <div class="columns-2">
+      <p><code>class="w-full aspect-video"</code></p>
+      <img
+        class="w-full aspect-video"
+        src="../assets/img/img8.jpg"
+        alt="a little girl wearing VR headset"
+      />
+      <img
+        class="w-full aspect-square"
+        src="../assets/img/img8.jpg"
+        alt="a little girl wearing VR headset"
+      />
+      <p><code>class="w-full aspect-square"</code></p>
+    </div>
   </body>
 </html>
 
@@ -55,7 +127,7 @@ columns-7xl	    columns: 80rem; /* 1280px */
 -->
 
 <!-- Break Before
-  reak-before-auto	break-before: auto;
+  break-before-auto	break-before: auto;
   break-before-avoid	break-before: avoid;
   break-before-all	break-before: all;
   break-before-avoid-page	break-before: avoid-page;
