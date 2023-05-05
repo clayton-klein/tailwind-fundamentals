@@ -5,18 +5,77 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Flex</title>
+    <title>Flexbox</title>
   </head>
   <body class="mb-8 mx-8">
-    <!-- Flex and alignment -->
+    <h2 class="bg-yellow-300 mb-4">Flex and Alignment:</h2>
+    <p>
+      1) Since Tailwind is mobile first, it's common to set the class "flex-col" to
+      begin with and change it later for different breakpoints.
+    </p>
+    <p>
+      2) Remeber, some Flexbox properties (in this case classes) go into the
+      "container" and some go into the "flex items".
+    </p>
+    <code class="font-bold mt-8 inline-block"
+      >class="flex flex-col sm:flex-wrap sm:flex-row sm:items-center
+      justify-between w-full sm:h-72 bg-gray-100"</code
+    >
+    <div
+      class="flex flex-col sm:flex-wrap sm:flex-row sm:items-center justify-between w-full sm:h-72 bg-gray-100"
+    >
+      <div class="p-10 border border-blue-300 bg-blue-100">01</div>
+      <div class="p-10 border border-blue-300 bg-blue-100">02</div>
+      <div class="p-10 border border-blue-300 bg-blue-100">03</div>
+      <div class="p-10 border border-blue-300 bg-blue-100">04</div>
+      <div class="p-10 border border-blue-300 bg-blue-100">05</div>
+      <div class="p-10 border border-blue-300 bg-blue-100">06</div>
+      <div class="p-10 border border-blue-300 bg-blue-100">07</div>
+      <div class="p-10 border border-blue-300 bg-blue-100">08</div>
+      <div class="p-10 border border-blue-300 bg-blue-100">09</div>
+      <div class="p-10 border border-blue-300 bg-blue-100">10</div>
+    </div>
 
-    <!-- Flex Column, Gap and Order -->
+    <h2 class="bg-yellow-300 mt-8">Flex Column, Gap and Order:</h2>
+    <code class="font-bold mt-8 inline-block"
+      >class="flex flex-col items-center justify-between gap-4 w-full
+      bg-gray-100"</code
+    >
+    <div
+      class="flex flex-col items-center justify-between gap-4 w-full bg-gray-100"
+    >
+      <div class="order-2 p-10 border border-blue-300 bg-blue-100">
+        01 (order-2)
+      </div>
+      <div class="order-1 p-10 border border-blue-300 bg-blue-100">
+        02 (order-1)
+      </div>
+      <div class="order-3 p-10 border border-blue-300 bg-blue-100">
+        03 (order-3)
+      </div>
+      <div class="order-0 p-10 border border-blue-300 bg-blue-100">
+        04 (order-0)
+      </div>
+    </div>
 
-    <!-- Grow and shrink -->
+    <h2 class="bg-yellow-300 mt-8 mb-4">Grow and Shrink:</h2>
+    <div class="flex flex-col sm:flex-row w-full bg-gray-100">
+      <div class="flex-initial w-64 p-10 border border-blue-300 bg-blue-100">
+        flex-inital (default)
+      </div>
+      <div class="flex-auto w-64 p-10 border border-blue-300 bg-blue-100">
+        flex-auto
+      </div>
+      <div class="flex-1 p-10 border border-blue-300 bg-blue-100">flex-1</div>
+      <div class="flex-none w-64 p-10 border border-blue-300 bg-blue-100">
+        flex-none
+      </div>
+      <div class="p-10 border border-blue-300 bg-blue-100">no flex class</div>
+    </div>
   </body>
 </html>
 
-<!-- Justify Content
+<!-- Justify Content:
       justify-start	      justify-content: flex-start;
       justify-end	        justify-content: flex-end;
       justify-center	    justify-content: center;
@@ -25,28 +84,28 @@
       justify-evenly	    justify-content: space-evenly;
     -->
 
-<!-- 
-      items-start	align-items: flex-start;
-      items-end	align-items: flex-end;
-      items-center	align-items: center;
-      items-baseline	align-items: baseline;
-      items-stretch	align-items: stretch;
+<!-- Align Items:
+      items-start	        align-items: flex-start;
+      items-end	          align-items: flex-end;
+      items-center	      align-items: center;
+      items-baseline	    align-items: baseline;
+      items-stretch	      align-items: stretch;
      -->
 
-<!-- Flex Direction
+<!-- Flex Direction:
       flex-row	        flex-direction: row;
       flex-row-reverse	flex-direction: row-reverse;
       flex-col	        flex-direction: column;
       flex-col-reverse	flex-direction: column-reverse;
     -->
 
-<!-- 
+<!-- Flex Wrap:
       flex-wrap	        flex-wrap: wrap;
       flex-wrap-reverse	flex-wrap: wrap-reverse;
       flex-nowrap	      flex-wrap: nowrap;
      -->
 
-<!-- Flex Properties
+<!-- Flex Properties:
       flex-none	    flex: none;     
       Prevent item from growing or shrinking
 
