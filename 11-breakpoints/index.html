@@ -7,13 +7,49 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Breakpoints & Media Queries</title>
   </head>
-  <!-- Tailwind is mobile-first -->
-  <body class="mb-8 mx-8">
-    
+  <body
+    class="bg-black sm:bg-green-800 md:bg-yellow-700 lg:bg-blue-500 xl:bg-pink-500 2xl:bg-red-500 mb-8 mx-8"
+  >
+    <h1 class="text-white text-4xl text-center font-bold my-8">
+      Tailwind is mobile-first!
+    </h1>
+    <p class="text-white mb-8">
+      Resize the window to see the background-color changes...
+    </p>
+    <p class="text-white mb-8">
+      To make changes based on the screen size we just need to prefix our
+      classes with the size of the screen we want to attend... <br />
+      <span class="font-bold"
+        >(sm = 640px, md = 768px, lg = 1024px, xl = 1280px, 2xl = 1536px)</span
+      >
+      <br />
+      ...followed by a colon (without spaces).
+    </p>
+    <p class="text-white">
+      class applied to the body:
+      <code class="text-white bg-black"
+        >class="bg-black sm:bg-green-800 md:bg-yellow-700 lg:bg-blue-500
+        xl:bg-pink-500 2xl:bg-red-500 mb-8 mx-8"</code
+      >
+    </p>
+    <h2 class="text-white text-4xl text-center mt-20"></h2>
+
+    <script>
+      function showBrowserWidth() {
+        const width = window.innerWidth;
+
+        document.querySelector("h2").innerText = `Current Width: ${width}px`;
+      }
+
+      window.onload = showBrowserWidth;
+      window.onresize = showBrowserWidth;
+    </script>
   </body>
 </html>
 
-<!-- Breakpoint Classes
+<!-- Breakpoint Classes (from 640px up, bellow it is the default, 
+     because Tailwind is mobile first):
+
     sm	640px	  @media (min-width: 640px) { ... }
     md	768px	  @media (min-width: 768px) { ... }
     lg	1024px	@media (min-width: 1024px) { ... }
