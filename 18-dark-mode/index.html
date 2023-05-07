@@ -1,14 +1,95 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+      };
+    </script>
+    <style>
+      .toggle-checkbox:checked {
+        right: 0;
+        border-color: #68d391;
+      }
+
+      .toggle-checkbox:checked + .toggle-label {
+        background-color: #68d391;
+      }
+    </style>
     <title>Dark Mode</title>
   </head>
   <body class="mb-8 mx-8">
-    <!-- By default, you can have your project use whatever mode your OS is using. You can use "dark:{class}". You can also set your config to use a class instead of using your OS mode -->
+    <div class="mt-8 w-2/3">
+      <p>
+        * By default, we can have our project use whatever mode (dark or light)
+        our OS is using.
+      </p>
+      <p>
+        * We can use the prefix "dark:{class}" to set some styles only for
+        "dark-mode".
+      </p>
+      <p>
+        * We can also set Tailwind config to use a class instead of using our OS
+        mode (we actually did it in this case, but just for the toggle btn,
+        inspect the page to see the config and style in the head and the script
+        at the bottom of the page).
+      </p>
+    </div>
+    <div
+      class="container mx-auto mt-10 bg-white dark:bg-slate-900 rounded-xl px-6 py-8 shadow-xl"
+    >
+      <h3 class="text-slate-900 dark:text-white font-medium tracking-tight">
+        Lorem ipsum dolor sit amet consectetur.
+      </h3>
+      <p class="text-slate-500 dark:text-slate-400 mt-2 text-sm">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem
+        nemo fugit commodi vero aspernatur soluta possimus inventore et corporis
+        aperiam.
+      </p>
+    </div>
+
+    <div class="mt-8 flex justify-center items-center">
+      <!-- Toggle button -->
+      <div
+        class="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in"
+      >
+        <input
+          type="checkbox"
+          name="toggle"
+          id="toggle"
+          class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"
+        />
+        <label
+          for="toggle"
+          class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"
+        ></label>
+      </div>
+      <label for="toggle" class="text-xs text-gray-700 font-bold"
+        >Toggle Dark-Mode</label
+      >
+    </div>
+
+    <!-- adding "dark-mode" class when the the toggle btn is clicked -->
+    <script>
+      document.getElementById("toggle").addEventListener("change", (e) => {
+        document.documentElement.classList.toggle("dark");
+
+        /*
+          an alternative would be...
+
+          if (e.target.checked) {
+            document.documentElement.classList.add("dark");
+          } else {
+            document.documentElement.classList.remove("dark");
+          }
+
+        */
+      });
+    </script>
   </body>
 </html>
 
