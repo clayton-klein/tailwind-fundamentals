@@ -7,37 +7,122 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Animation</title>
   </head>
-  <body class="mb-8 mx-8">
-    <div class="flex items-center justify-center min-h-screen bg-slate-900">
-      <svg
-        class="w-48 text-white"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-      >
-        <circle
-          class="opacity-25"
-          cx="12"
-          cy="12"
-          r="10"
-          stroke="currentColor"
-          stroke-width="4"
-        ></circle>
-        <path
-          class="opacity-75"
-          fill="currentColor"
-          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-        ></path>
-      </svg>
+  <body>
+    <p class="text-white text-center font-bold bg-slate-900 pt-8 pb-10 pl-8">Tailwind has these 4 basic animations and it's also possible to create custom ones in the "tailwind.config" file.</p>
+    <div
+    class="flex justify-center gap-24 min-h-screen bg-slate-900"
+    >
+      <div>
+        <code class="text-white font-bold block text-center mb-20">animate-spin</code>
+        <svg
+          class="animate-spin w-48 text-white"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+        >
+          <circle
+            class="opacity-25"
+            cx="12"
+            cy="12"
+            r="10"
+            stroke="currentColor"
+            stroke-width="4"
+          ></circle>
+          <path
+            class="opacity-75"
+            fill="currentColor"
+            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+          ></path>
+        </svg>
+      </div>
+
+      <div>
+
+        <code class="text-white font-bold block text-center mb-20">animate-ping</code>
+        <svg
+          class="animate-ping w-48 text-white"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+        >
+          <circle
+            class="opacity-25"
+            cx="12"
+            cy="12"
+            r="10"
+            stroke="currentColor"
+            stroke-width="4"
+          ></circle>
+          <path
+            class="opacity-75"
+            fill="currentColor"
+            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+          ></path>
+        </svg>
+      </div>
+
+      <div>
+
+        <code class="text-white font-bold block text-center mb-20">animate-pulse</code>
+        <svg
+          class="animate-pulse w-48 text-white"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+        >
+          <circle
+            class="opacity-25"
+            cx="12"
+            cy="12"
+            r="10"
+            stroke="currentColor"
+            stroke-width="4"
+          ></circle>
+          <path
+            class="opacity-75"
+            fill="currentColor"
+            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+          ></path>
+        </svg>
+      </div>
+
+      <div>
+
+        <code class="text-white font-bold block text-center mb-20">animate-bounce</code>
+        <svg
+          class="animate-bounce w-48 text-white"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+        >
+          <circle
+            class="opacity-25"
+            cx="12"
+            cy="12"
+            r="10"
+            stroke="currentColor"
+            stroke-width="4"
+          ></circle>
+          <path
+            class="opacity-75"
+            fill="currentColor"
+            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+          ></path>
+        </svg>
+      </div>
     </div>
   </body>
 </html>
 
-<!-- Animate
+<!-- Animate classes:
+
 animate-none	animation: none;
+
+====================================================================
 
 animate-spin	animation: spin 1s linear infinite;
 
+*** animate-spin is the keyframe bellow in CSS... ***
 @keyframes spin {
   from {
     transform: rotate(0deg);
@@ -47,9 +132,11 @@ animate-spin	animation: spin 1s linear infinite;
   }
 }
 
+====================================================================
 
 animate-ping	animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
 
+animate-ping is the keyframe bellow in CSS...
 @keyframes ping {
   75%, 100% {
     transform: scale(2);
@@ -57,9 +144,11 @@ animate-ping	animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
   }
 }
 
+====================================================================
 
 animate-pulse	animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 
+animate-pulse is the keyframe bellow in CSS...
 @keyframes pulse {
   0%, 100% {
     opacity: 1;
@@ -69,9 +158,11 @@ animate-pulse	animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
 }
 
+====================================================================
 
 animate-bounce	animation: bounce 1s infinite;
 
+animate-bounce is the keyframe bellow in CSS...
 @keyframes bounce {
   0%, 100% {
     transform: translateY(-25%);
