@@ -5,26 +5,75 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- custom tailwind.config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          // here we replaced the config so the 2xl class set in the body doesn't exist anymore.
+          screens: {
+            sm: "550px",
+            md: "800px",
+            lg: "1200px",
+            xl: "1440px",
+          },
+          // here we're just changing some default values and not replacing everything.
+          // extend: {
+          //   screens: {
+          //     sm: "550px",
+          //     md: "800px",
+          //     lg: "1200px",
+          //     xl: "1440px",
+          //   },
+          // },
+          fontFamily: {
+            sans: ["Graphik", "sans-serif"],
+            serif: ["Merriweather", "serif"],
+          },
+          extend: {
+            colors: {
+              primary: "#ff5733",
+              secondary: "#fffc33",
+            },
+            spacing: {
+              6: "60px",
+              // the max default is 96, here we're creating 128.
+              128: "32rem",
+            },
+            borderRadius: {
+              // the max default is 2xl, here we're creating 4xl.
+              "4xl": "2rem",
+            },
+          },
+        },
+      };
+    </script>
     <title>Customization</title>
   </head>
   <body
     class="mb-8 mx-8 bg-black sm:bg-green-800 md:bg-primary lg:bg-yellow-800 xl:bg-purple-800 2xl:bg-orange-800"
   >
-    <h1 class="text-white text-xl md:text-3xl xl:text-5xl">
-      Tailwind is awesome
-    </h1>
+    <!-- here we're using custom color, sizing (6 = 60px) and border-radius 4xl -->
+    <div class="border border-primary p-6 rounded-4xl">
+      <h1 class="text-white text-xl my-8 md:text-3xl xl:text-5xl"></h1>
+    </div>
+    <p class="text-white mt-8">
+      Since we're using Tailwind via a CDN script tag, we had to create a
+      tailwind.config object in a script inside the head element (inspect the
+      page to see it), but usually, after installing Tailwind on our projects,
+      we have a tailwind.config file where we can customize/create stuff.
+    </p>
 
     <script>
       function showBrowserWidth() {
         const width =
           window.innerWidth ||
           document.documentElement.clientWidth ||
-          document.body.clientWidth
+          document.body.clientWidth;
 
-        document.querySelector('h1').innerHTML = `Width: ${width}`
+        document.querySelector("h1").innerHTML = `Width: ${width}`;
       }
-      window.onload = showBrowserWidth
-      window.onresize = showBrowserWidth
+      window.onload = showBrowserWidth;
+      window.onresize = showBrowserWidth;
     </script>
   </body>
 </html>
