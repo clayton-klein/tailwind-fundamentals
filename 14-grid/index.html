@@ -8,14 +8,42 @@
     <title>Grid</title>
   </head>
   <body class="mb-8 mx-8">
-    <!-- Grid cols and rows -->
+    <h2 class="bg-yellow-300 mb-4">Grid cols and rows:</h2>
+    <p class="mb-4">* In both examples bellow we started with "grid-cols-1" (mobile first approach, one column and grid items stacked above each other) and then from medium screens upwards we added the "span"
+    to the columns and rows.</p>
+    <p>* We apply the classes "grid-cols-" and "grid-rows-" to the grid container.</p>
+    <code class="font-bold">class="grid grid-cols-1 md:grid-cols-3 grid-rows-4 gap-2 bg-green-100"</code>
+    <div class="grid grid-cols-1 md:grid-cols-3 grid-rows-4 gap-2 bg-green-100">
+      <div class="p-10 border border-blue-600 bg-blue-100">Item 1</div>
+      <div class="p-10 border border-blue-600 bg-blue-100">Item 2</div>
+      <div class="p-10 border border-blue-600 bg-blue-100">Item 3</div>
+      <div class="p-10 border border-blue-600 bg-blue-100">Item 4</div>
+      <div class="p-10 border border-blue-600 bg-blue-100">Item 5</div>
+      <div class="p-10 border border-blue-600 bg-blue-100">Item 6</div>
+      <div class="p-10 border border-blue-600 bg-blue-100">Item 7</div>
+      <div class="p-10 border border-blue-600 bg-blue-100">Item 8</div>
+      <div class="p-10 border border-blue-600 bg-blue-100">Item 9</div>
+    </div>
 
-    <!-- Col and row span -->
+    <h2 class="bg-yellow-300 mt-8 mb-4">Col and row span:</h2>
+    <p>* We apply the classes "col-span-" and "row-span-" to the grid elements.</p>
+    <code class="font-bold">class="grid grid-cols-3 gap-2 bg-green-100"</code>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-2 bg-green-100">
+      <div class="md:col-span-2 md:row-span-2 p-10 border border-blue-600 bg-blue-100">Item 1 (col-span-2 row-span-2)</div>
+      <div class="p-10 border border-blue-600 bg-blue-100">Item 2</div>
+      <div class="p-10 border border-blue-600 bg-blue-100">Item 3</div>
+      <div class="p-10 border border-blue-600 bg-blue-100">Item 4</div>
+      <div class="p-10 border border-blue-600 bg-blue-100">Item 5</div>
+      <div class="p-10 border border-blue-600 bg-blue-100">Item 6</div>
+      <div class="md:col-span-2 p-10 border border-blue-600 bg-blue-100">Item 7 (col-span-2)</div>
+      <div class="p-10 border border-blue-600 bg-blue-100">Item 8</div>
+      <div class="md:col-span-3 p-10 border border-blue-600 bg-blue-100">Item 9 (col-span-3)</div>
+    </div>
   </body>
 </html>
 
 <!-- 
-  Grid Template Columns
+  Grid Template Columns (equal colums):
   grid-cols-1	    grid-template-columns: repeat(1, minmax(0, 1fr));
   grid-cols-2	    grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-cols-3	    grid-template-columns: repeat(3, minmax(0, 1fr));
